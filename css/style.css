@@ -1,0 +1,25 @@
+:root {
+  --main-color: #20ad96;
+}
+
+i {
+  cursor: pointer;
+}
+
+/* header */
+header {
+  position: fixed;
+  width: 100%;
+  left: 0px;
+  top: 0px;
+  z-index: 1;
+}
+/* logo img */
+.logo img {
+  width: 45%;
+}
+
+/* botton search icon of header */
+.nav-right .btn i {
+  color: var(--main-color);
+}
