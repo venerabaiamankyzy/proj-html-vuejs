@@ -23,3 +23,25 @@ header {
 .nav-right .btn i {
   color: var(--main-color);
 }
+/****************************************/
+/* jumbotron */
+#jumbotron {
+  height: 80vh;
+  background-image: url("../img/img/home-3-hero-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right center;
+  color: white;
+  margin-top: 74px;
+}
+
+#jumbotron h1 {
+  letter-spacing: 2px;
+}
+
+#jumbotron .btn {
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 13px 35px;
+  color: var(--main-color);
+}
