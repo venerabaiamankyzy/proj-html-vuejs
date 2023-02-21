@@ -1,9 +1,14 @@
 :root {
   --main-color: #20ad96;
+  --greycolor: #696969;
 }
 
 i {
   cursor: pointer;
+}
+
+.mr {
+  margin-right: 140px;
 }
 
 /* header */
@@ -12,7 +17,8 @@ header {
   width: 100%;
   left: 0px;
   top: 0px;
-  z-index: 1;
+  z-index: 2;
+  background-color: white;
 }
 /* logo img */
 .logo img {
@@ -23,16 +29,19 @@ header {
 .nav-right .btn i {
   color: var(--main-color);
 }
-/****************************************/
-/* jumbotron */
+
+/*************************************
+*           Jumbotron                *
+*************************************/
+
 #jumbotron {
-  height: 80vh;
+  height: 75vh;
   background-image: url("../img/img/home-3-hero-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: right center;
   color: white;
-  margin-top: 74px;
+  margin-top: 72px;
 }
 
 #jumbotron h1 {
@@ -44,4 +53,239 @@ header {
   font-weight: 700;
   padding: 13px 35px;
   color: var(--main-color);
+}
+
+/*************************************
+*  Section 2 / Work Culture   *
+*************************************/
+#work-culture .text-color {
+  color: var(--main-color);
+}
+#work-culture a {
+  color: var(--main-color);
+}
+
+/* section2 right side, images */
+#work-culture .sec2-img2 {
+  position: absolute;
+  top: -50px;
+  right: 70px;
+
+  width: 12%;
+  border-radius: 10px;
+}
+#work-culture img:nth-child(1) {
+  border-radius: 10px;
+  /* padding-right: 30px; */
+}
+
+#work-culture img:nth-child(2) {
+  position: absolute;
+  top: -30px;
+  right: 180px;
+  z-index: -1;
+}
+
+#work-culture img:nth-child(4) {
+  position: absolute;
+  bottom: 100px;
+  right: 160px;
+}
+
+/* circle shape of left side of section2 */
+#work-culture .shape {
+  width: 60px;
+  height: 60px;
+  border: 8px solid #ecc5ab;
+  border-radius: 50%;
+
+  position: absolute;
+  top: 25px;
+  left: 510px;
+}
+
+/* work-culture numbers */
+#work-culture .numbers div span {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--main-color);
+}
+#work-culture .numbers div p {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: var(--greycolor);
+  letter-spacing: 1.2px;
+  margin-top: 10px;
+}
+
+/*************************************
+*  Section 3 / Upgrade your skills   *
+*************************************/
+
+#upgrade-skills .sec3-main-img {
+  border-radius: 10px;
+  width: 100%;
+}
+
+#upgrade-skills img:nth-child(2) {
+  position: absolute;
+  bottom: -75px;
+  right: -25px;
+  z-index: -2;
+}
+#upgrade-skills img:nth-child(3) {
+  position: absolute;
+  top: 45px;
+  left: -70px;
+  z-index: -1;
+}
+#upgrade-skills img:nth-child(4) {
+  position: absolute;
+  top: -100px;
+  left: -30px;
+  z-index: -1;
+}
+#upgrade-skills .sec3-right-side {
+  padding-left: 80px;
+  margin-top: 40px;
+}
+#upgrade-skills h2 span {
+  color: var(--main-color);
+}
+#upgrade-skills .shape {
+  width: 60px;
+  height: 60px;
+  border: 8px solid #ecc5ab;
+  border-radius: 50%;
+
+  position: absolute;
+  top: -35px;
+  right: -80px;
+}
+
+/*************************************
+*  Section 4 / Lates online courses  *
+*************************************/
+
+/* green color of the h2 of the section 4 */
+/* #online-courses,
+#upgrade-skills{
+  background-color: #f6f6f6;
+} */
+
+#online-courses h2 span {
+  color: var(--main-color);
+}
+/* Card Body of the section 4 */
+#online-courses .card-img img {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+#online-courses .card-desc h5 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 2.4rem;
+  margin-bottom: 30px;
+  color: #333333;
+}
+#online-courses .card-desc p {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--main-color);
+  margin-bottom: 5px;
+}
+#online-courses .card-shadow {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border-radius: 10px;
+}
+
+/* Card carousel of the section 4 */
+
+.carousel-point-main {
+  width: 13px;
+  height: 13px;
+  background-color: black;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.carousel-point {
+  width: 10px;
+  height: 10px;
+  background-color: lightgray;
+  border-radius: 50%;
+  margin: 2px;
+  cursor: pointer;
+}
+
+/*************************************
+*     Section 5 / Testimonials       *
+*************************************/
+
+/* green color of the h2 of the section 4 */
+#testimonials h2 {
+  padding-right: 81px;
+}
+#testimonials h2 span {
+  color: var(--main-color);
+}
+#testimonials img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+#testimonials .testimonial-carousel-1 {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border-radius: 10px;
+  padding: 30px 60px;
+  position: relative;
+  background-color: white;
+  z-index: 1;
+}
+#testimonials .testimonial-carousel-2 {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+  border-radius: 10px;
+  padding: 30px 60px;
+  margin: 30px 30px 0 30px;
+  opacity: 0.5;
+
+  position: absolute;
+  bottom: -105px;
+}
+#testimonials .testimonial-carousel-3 {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+  border-radius: 10px;
+  padding: 30px 60px;
+  margin: 30px 30px 0 30px;
+  opacity: 0.5;
+
+  position: absolute;
+  top: -165px;
+}
+
+/*************************************
+*  Section 7 / Lates From our blogs  *
+*************************************/
+
+/* green color of the h2 of the section 4 */
+#our-blogs h2 span {
+  color: var(--main-color);
+}
+#our-blogs .card-img img {
+  border-radius: 10px;
+}
+#our-blogs .card-desc h5 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 2.4rem;
+  margin-bottom: 20px;
+  color: #333333;
+}
+#our-blogs .card-desc p {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--main-color);
+  margin-bottom: 5px;
 }
