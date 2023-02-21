@@ -1,6 +1,7 @@
 :root {
   --main-color: #20ad96;
   --greycolor: #696969;
+  --bg-lightgrey: #f8f8f8;
 }
 
 i {
@@ -270,14 +271,17 @@ header {
 *************************************/
 
 #transform-you .sec3-main-img {
+  margin: 50px 0 100px 0;
+}
+#transform-you .sec3-main-img {
   border-radius: 10px;
   width: 100%;
 }
 
 #transform-you img:nth-child(2) {
   position: absolute;
-  bottom: -95px;
-  right: 240px;
+  bottom: 10px;
+  right: 225px;
   z-index: -2;
 }
 #transform-you img:nth-child(3) {
@@ -332,6 +336,10 @@ header {
 *************************************/
 
 /* green color of the h2 of the section 4 */
+.blogs {
+  background-color: var(--bg-lightgrey);
+  margin-top: 50px;
+}
 #our-blogs h2 span {
   color: var(--main-color);
 }
