@@ -266,6 +266,68 @@ header {
 }
 
 /*************************************
+*     Section 6 / Transform You      *
+*************************************/
+
+#transform-you .sec3-main-img {
+  border-radius: 10px;
+  width: 100%;
+}
+
+#transform-you img:nth-child(2) {
+  position: absolute;
+  bottom: -95px;
+  right: 240px;
+  z-index: -2;
+}
+#transform-you img:nth-child(3) {
+  position: absolute;
+  top: 155px;
+  left: -60px;
+  z-index: 4;
+}
+#transform-you img:nth-child(4) {
+  position: absolute;
+  top: 90px;
+  left: 30px;
+  z-index: -3;
+  width: 22%;
+  opacity: 0.7;
+}
+#transform-you img:nth-child(5) {
+  position: absolute;
+  bottom: -22px;
+  left: -115px;
+  z-index: -3;
+  width: 22%;
+  opacity: 0.7;
+}
+#transform-you .sec3-right-side {
+  padding-left: 80px;
+  margin-top: 40px;
+}
+#transform-you h2 span {
+  color: var(--main-color);
+}
+#transform-you .shape {
+  width: 60px;
+  height: 60px;
+  border: 8px solid #ecc5ab;
+  border-radius: 50%;
+
+  position: absolute;
+  top: 28px;
+  right: -80px;
+}
+#transform-you button {
+  color: whitesmoke;
+  background-color: var(--main-color);
+  padding: 10px 40px;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+/*************************************
 *  Section 7 / Lates From our blogs  *
 *************************************/
 
