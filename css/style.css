@@ -5,6 +5,10 @@
   --footer-text: #f5f1ed;
 }
 
+li {
+  list-style: none;
+}
+
 i {
   cursor: pointer;
 }
@@ -423,19 +427,18 @@ header {
 #footer a {
   text-decoration: none;
   color: var(--footer-text);
-}
-#footer ul li {
-  list-style: none;
-  padding-left: 0;
   font-size: 0.85rem;
-  margin: 8px;
   opacity: 0.7;
 }
+
+#footer ul li a:hover {
+  color: var(--main-color);
+}
+
 #footer .mt-40 {
   margin-top: 47px;
 }
 #footer h6 {
-  padding-left: 5px;
   font-size: 1.2rem;
   color: white;
 }
@@ -447,9 +450,29 @@ header {
 #footer i {
   font-size: 1.5rem;
   margin: 10px;
-  opacity: 0.7;
+}
+#footer i:hover {
+  color: var(--main-color);
 }
 #footer .text-rights {
   width: 100%;
   opacity: 0.7;
+}
+
+/* hover */
+#jumbotron .btn:hover {
+  color: white;
+  background-color: var(--main-color);
+  border-color: var(--main-color);
+  transition: 0.4s;
+}
+
+.dropdown-menu.show {
+  display: block;
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
 }

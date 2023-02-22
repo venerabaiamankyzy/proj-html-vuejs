@@ -59,8 +59,7 @@
               id="navbarSupportedContent"
             >
               <ul class="navbar-nav mb-lg-0 gap-3">
-                <!-- Home -->
-                <li class="nav-item dropdown position-static w-100">
+                <li v-for="(item, index) in headerNav.leftHeader" class="nav-item dropdown position-static w-100">
                   <a
                     class="nav-link dropdown-toggle active"
                     href="#"
@@ -68,102 +67,7 @@
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
                   >
-                    Home
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li><a href="#">Lorem ipsum</a></li>
-                    <li><a href="#">Lorem ipsum</a></li>
-                    <li><a href="#">Lorem ipsum</a></li>
-                    <li><a href="#">Lorem ipsum</a></li>
-                  </ul>
-                </li>
-
-                <!-- Pages -->
-                <li class="nav-item dropdown position-static w-100">
-                  <a
-                    class="nav-link dropdown-toggle active"
-                    href="#"
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    Pages
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li><a href="#">Lorem ipsum</a></li>
-                    <li><a href="#">Lorem ipsum</a></li>
-                    <li><a href="#">Lorem ipsum</a></li>
-                    <li><a href="#">Lorem ipsum</a></li>
-                  </ul>
-                </li>
-
-                <!-- Courses -->
-                <li class="nav-item dropdown position-static w-100">
-                  <a
-                    class="nav-link dropdown-toggle active"
-                    href="#"
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    Courses
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li><a href="#">Lorem ipsum</a></li>
-                    <li><a href="#">Lorem ipsum</a></li>
-                    <li><a href="#">Lorem ipsum</a></li>
-                    <li><a href="#">Lorem ipsum</a></li>
-                  </ul>
-                </li>
-
-                <!-- Features -->
-                <li class="nav-item dropdown position-static w-100">
-                  <a
-                    class="nav-link dropdown-toggle active"
-                    href="#"
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    Features
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li><a href="#">Lorem ipsum</a></li>
-                    <li><a href="#">Lorem ipsum</a></li>
-                    <li><a href="#">Lorem ipsum</a></li>
-                    <li><a href="#">Lorem ipsum</a></li>
-                  </ul>
-                </li>
-
-                <!-- Blog -->
-                <li class="nav-item dropdown position-static w-100">
-                  <a
-                    class="nav-link dropdown-toggle active"
-                    href="#"
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    Blog
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li><a href="#">Lorem ipsum</a></li>
-                    <li><a href="#">Lorem ipsum</a></li>
-                    <li><a href="#">Lorem ipsum</a></li>
-                    <li><a href="#">Lorem ipsum</a></li>
-                  </ul>
-                </li>
-
-                <!-- Shop -->
-                <li class="nav-item dropdown position-static w-100">
-                  <a
-                    class="nav-link dropdown-toggle active"
-                    href="#"
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    Shop
+                    {{item.nav}}
                   </a>
                   <ul class="dropdown-menu">
                     <li><a href="#">Lorem ipsum</a></li>
@@ -174,32 +78,29 @@
                 </li>
               </ul>
 
-              <!-- Center of the header
-                   Logo MaxCoach -->
+              <!-- Center of the header / Logo MaxCoach -->
               <div class="logo">
                 <a class="navbar-brand" href="#">
-                  <img src="./img/img/dark-logo.png" alt="Logo" />
+                  <img :src="'./img/'+ 'img/' + headerNav.logo + '.png'" alt="Logo">
                 </a>
               </div>
 
               <!-- Right side of header -->
               <div class="nav-right">
                 <ul class="navbar-nav mb-2 mb-lg-0 align-items-center">
-                  <li><i class="fa-solid fa-cart-shopping"></i></li>
-                  <li><i class="fa-regular fa-circle-user mx-3"></i></li>
+                  <li v-for="icon in headerNav.rightHeader" ><i :class="icon.icon" class="mx-2"></i></li>
                   <li>
                     <form class="d-flex" role="search">
                       <input
-                        class="form-control"
+                        class="form-control ms-2"
                         type="search"
                         placeholder="Search"
                         aria-label="Search"
                       />
-                      <button class="btn fw-bolder" type="button">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                        Search
-                      </button>
-                    </form>
+                      <a class="btn fw-bolder" type="button">
+                        <i :class="headerNav.buttonIcon"></i>
+                      </a>
+                    </form>                    
                   </li>
                 </ul>
               </div>
@@ -744,17 +645,16 @@
             <div class="row pt-5">
               <div class="col-12 col-lg-6">
                 <div class="address">
-                  <h6>Address</h6>
+                  <h6>{{footerNav.text}}</h6>
                   <p>382 NE 191st St # 87394 Miami, FL 33179-3899</p>
                   <p>+1 (305) 547-9909 (9am - 5pm EST, Monday - Friday)</p>
                   <p>support@maxcoach.com</p>
                 </div>
                 <div class="icon-social d-flex align-items-center mt-4">
-                  <i class="fa-brands fa-square-facebook"></i>
-                  <i class="fa-brands fa-square-twitter"></i>
-                  <i class="fa-brands fa-instagram"></i>
-                  <i class="fa-brands fa-linkedin"></i>
-                </div>
+                  <div v-for="social in footerNav.socialMedias">
+                    <i :class="social.social"></i>
+                  </div>                
+                </div>                
               </div>
 
               <div class="col-12 col-lg-6">
@@ -762,27 +662,20 @@
                   <div class="col-12 col-md-4">
                     <h6>Explore</h6>
                     <ul class="ps-0 mt-4">
-                      <li><a href="#">Start here</a></li>
-                      <li><a href="#">Blog</a></li>
-                      <li><a href="#">About us</a></li>
+                      <li v-for="item, index in footerNav.navItemsExplore"><a href="#">{{item.link}}</a></li>
                     </ul>
                   </div>
                   
                   <div class="col-12 col-md-4">
                   
                     <ul class="ps-0 mt-40">
-                    <li><a href="#">Success story</a></li>
-                    <li><a href="#">Courses</a></li>
-                    <li><a href="#">Contsct us</a></li>
+                    <li v-for="item, index in footerNav.navItemsExplore2"><a href="#">{{item.link}}</a></li>
                     </ul>
                   </div>
                   <div class="col-12 col-md-4">
                     <h6>Information</h6>
                     <ul class="ps-0 mt-4">
-                      <li><a href="#">Membership</a></li>
-                      <li><a href="#">Purchace guide</a></li>
-                      <li><a href="#">Privacy policy</a></li>
-                      <li><a href="#">Terms of service</a></li>
+                      <li v-for="item, index in footerNav.navItemsInformation"><a href="#">{{item.link}}</a></li>                      
                     </ul>
                   </div>
                   
@@ -790,7 +683,7 @@
               </div>
               <div class="col-12 col-lg-6 text-center text-rights mt-5">
                  <a href="#" class=""
-                    >©2020 Maxcoach. All right Reserved</a
+                    >{{footerNav.textRights}}</a
                   >
                 </p>
               </div>
