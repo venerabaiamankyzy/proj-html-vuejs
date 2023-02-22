@@ -59,8 +59,9 @@
               id="navbarSupportedContent"
             >
               <ul class="navbar-nav mb-lg-0 gap-3">
-                <li v-for="(item, index) in headerNav.leftHeader" class="nav-item dropdown position-static w-100">
-                  <a
+                <li v-for="(item, index) in headerNav.leftHeader" class="nav-item dropdown position-static">
+                  <div class="link">
+                    <a
                     class="nav-link dropdown-toggle active"
                     href="#"
                     role="button"
@@ -69,11 +70,18 @@
                   >
                     {{item.nav}}
                   </a>
+                  </div>
+                  
                   <ul class="dropdown-menu">
-                    <li><a href="#">Lorem ipsum</a></li>
-                    <li><a href="#">Lorem ipsum</a></li>
-                    <li><a href="#">Lorem ipsum</a></li>
-                    <li><a href="#">Lorem ipsum</a></li>
+                    <li><a href="#jumbotron">Our guide</a></li>
+                    <li><a href="#work-culture">Our Work Culture</a></li>
+                    <li><a href="#upgrade-skills">Update Your Skills</a></li>
+                    <li><a href="#online-courses">Online Courses</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#transform-you">Transform you!</a></li>
+                    <li><a href="#our-blogs">Our Blogs!</a></li>
+                    <li><a href="#subscribe">Subscribe Newsletters</a></li>
+                    
                   </ul>
                 </li>
               </ul>
@@ -271,7 +279,7 @@
                   </div>
                   <div class="card-desc p-4">
                     <p>$40.00</p>
-                    <h5>Learning to Write as a Professional Author</h5>
+                    <h5 class="link">Learning to Write as a Professional Author</h5>
                     <div class="mb-4">
                       <span class="opacity-50 me-5"
                         ><i class="fa-regular fa-file-lines"></i> 20
@@ -297,7 +305,7 @@
                   </div>
                   <div class="card-desc p-4">
                     <p>$0.00</p>
-                    <h5>Customer-centric Info-Tech Strategies</h5>
+                    <h5 class="link">Customer-centric Info-Tech Strategies</h5>
                     <div class="mb-4">
                       <span class="opacity-50 me-5"
                         ><i class="fa-regular fa-file-lines"></i> 24
@@ -323,7 +331,7 @@
                   </div>
                   <div class="card-desc p-4">
                     <p>$19.00</p>
-                    <h5>Open Programming Courses for Everyone: Python</h5>
+                    <h5 class="link">Open Programming Courses for Everyone: Python</h5>
                     <div class="mb-4">
                       <span class="opacity-50 me-5"
                         ><i class="fa-regular fa-file-lines"></i> 17
@@ -691,6 +699,13 @@
           </div>
         </section>
       </footer>
+      <button
+        type="button"
+        class="btn btn-success btn-lg"
+        id="btn-back-to-top"
+        ><i class="fa-solid fa-angles-up"></i>.
+  
+</button>
     </div>
 
     <!-- script -->
