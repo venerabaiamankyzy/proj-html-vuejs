@@ -12,8 +12,10 @@ i {
 .mr {
   margin-right: 140px;
 }
+/*************************************
+*             Header                 *
+*************************************/
 
-/* header */
 header {
   position: fixed;
   width: 100%;
@@ -409,12 +411,15 @@ header {
   left: 80px;
 }
 
+/*************************************
+*             Footer                 *
+*************************************/
+
 #footer {
   background-color: #3f3a64;
   color: var(--footer-text);
   padding: 20px;
 }
-
 #footer a {
   text-decoration: none;
   color: var(--footer-text);
